@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/pathfinder.js" type="text/javascript"></script>
+    <title>Pathfinder</title>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="controls">
+        <div class="control-group">
+            <button id="start-btn">Start</button>
+            <button id="stop-btn">Stop</button>
+            <button id="step-btn">Step Through</button>
+            <button id="reset-btn">Reset</button>
+        </div>
+        <div class="control-group">
+            <p>Update rate (ms): <span id="updaterate-number">0</span></p>
+            <input id="updaterate" type="range" name="updaterate" min="50" max="2500"><input type="text" id="updateratetext" name="updateratetext">
+            <p class="helper">Controls how fast the player make a new step.</p>
+        </div>
+        <div class="control-group">
+            <p>Total Steps: <span id="steps-number">0</span>&nbsp;&nbsp;|&nbsp;&nbsp;x=<span id="player-x-position"></span>, y=<span id="player-y-position"></span></p>
+        </div>
+        <div class="control-group">
+            <span>Steps: </span><button id="show-steps-btn">Show</button><button id="hide-steps-btn">Hide</button><button id="clear-steps-btn">Clear</button>
+            <ul id="steps-list"></ul>
+        </div>
+        <div class="control-group">
+            <span>Fastest move list: </span><button id="show-moves-btn">Show</button><button id="hide-moves-btn">Hide</button><p id="best-moves-list"></p>
+        </div>
+        <div class="control-group">
+            <button id="calculate-button">Calculate Fastest Path</button><progress id="calculation-progress" value="0"></progress>
+            <br />
+            <span>Render Visually?</span><input id="render-checkbox" type="checkbox" />
+            <p class="helper">If checked, the player will visually move on the board, showing the test occurring.</p>
+            <p>Number of steps to calculate against: <span id="calculationsteps-number">0</span></p>
+            <input id="calculationsteps" type="range" name="calculationsteps" min="50" max="10000"><input type="text" id="calculationstepstext" name="calculationstepstext">
+        </div>
+        <div class="control-group">
+            <span>Leave trail?</span><input id="leave-trail-checkbox" type="checkbox" />
+            <p class="helper">If checked, the player will not be able to go back onto any tiles that he has already stepped on.<br />This may be faster for calculating fastest path because it skips all paths in which the player back-tracks.</p>
+        </div>
+    </div>
+    <div id="outputArray" >
+        <div class="control-group">
+            <span>Mapped Array: </span>
+            <button id="show-array-btn">Show</button>
+            <button id="hide-array-btn">Hide</button>
+            <div id="mapped-array"></div>
+        </div>
+        <div class="control-group">
+            <span>Enter Custom-Mapped Array: </span><br />
+            <textarea id="custom-array"></textarea>
+        </div>
+    </div>
+</body>
+</html>

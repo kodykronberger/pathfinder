@@ -1,0 +1,209 @@
+#container {
+    margin-right: auto;
+    margin-left: auto;
+    width: 640px;
+    height: 640px;
+    border: 2px solid #B9B9B9;
+}
+
+.control-group {
+    padding: 5px 15px;
+    background-color: #FFF;
+    border: 1px solid #000000;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.tile {
+    box-sizing: border-box;
+}
+
+.wall {
+    width: 64px;
+    height: 64px;
+    background-color: black;
+    margin: 0;
+    float: left;
+    background: url(../img/walltex.png);
+}
+
+.win {
+    width: 64px;
+    height: 64px;
+    background-color: red;
+    margin: 0;
+    float: left;
+}
+
+.outerwall {
+    width: 64px;
+    height: 64px;
+    background-color: black;
+    margin: 0;
+    float: left;
+    background: url(../img/walltex.png);
+}
+
+.ground {
+    width: 64px;
+    height: 64px;
+    margin: 0;
+    float: left;
+    background: url(../img/groundtex.png);
+}
+
+.player {
+    width: 64px;
+    height: 64px;
+    background-color: red;
+    margin: 0;
+    float: left;
+    position: absolute;
+}
+
+.player-down {
+    background: url(../img/playerdown2.png);
+    background-repeat: no-repeat;
+}
+
+.player-up {
+    background: url(../img/playerup2.png);
+    background-repeat: no-repeat;
+}
+
+.player-left {
+    background: url(../img/playerleft2.png);
+    background-repeat: no-repeat;
+}
+
+.player-right {
+    background: url(../img/playerright2.png);
+    background-repeat: no-repeat;
+}
+
+#controls {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    max-height: 700px;
+    overflow-y: scroll;
+}
+
+#outputArray {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25%;
+    
+}
+
+progress {
+    margin-left: 15px;
+    width: 60%;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+}
+
+#calculationstepstext, #updateratetext {
+    width: 5em;
+}
+
+#steps-list {
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+#best-moves-list {
+    max-height: 200px;
+    overflow-y: scroll;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+#mapped-array {
+margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+/* TILE BORDERS */
+.tile-border-top {
+    border-top: 1px solid rgba(0,0,0,0.5);
+}
+
+.tile-border-bottom {
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+}
+
+.tile-border-left {
+    border-left: 1px solid rgba(0,0,0,0.5);
+}
+
+.tile-border-right {
+    border-right: 1px solid rgba(0,0,0,0.5);
+}
+
+.ground-onleft {
+    background: url(../img/ground_onleft.png);
+}
+
+.ground-onright {
+    background: url(../img/ground_onright.png);
+}
+
+.ground-ontop {
+    background: url(../img/ground_ontop.png);
+}
+
+.ground-onbottom {
+    background: url(../img/ground_onbottom.png);
+}
+
+/* ARRAY STYLES */
+.array-orange {
+    color: #FF872F;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.error-red {
+    color: red;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.array-blue {
+    color: #140FC5;
+    font-size: 1.2em;
+    
+}
+
+.array-black {
+    color: black;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.array-green {
+    color: green;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.helper {
+    color: blue;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/* Ground already covered */
+.stepped-over {
+    background: url(../img/groundtex-covered.png);
+}
